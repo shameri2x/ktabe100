@@ -4,11 +4,11 @@
     <!-- meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A simple website that shows you the movies I like.">
-    <meta name="author" content="A7md AlShammari">
-    <meta property="og:title" content="A7md-Movies">
-    <meta property="og:site_name" content="A7md-Movies">
-    <meta property="og:description" content="A simple website that shows you the movies I like.">
+    <meta name="description" content="مصة قرائية للقراء">
+    <meta name="author" content="أحمد الشمري">
+    <meta property="og:title" content="كتابي">
+    <meta property="og:site_name" content="كتابي">
+    <meta property="og:description" content="موقع بسيط للقراء">
     <meta property="og:type" content="website">
     <meta property="og:image" content="imgs/logo.png">
 
@@ -16,9 +16,8 @@
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="style.css">
-    <!-- other -->
-    <link rel="icon" href="imgs/logo.png.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
     <title>كتابي</title>
   </head>
   <body>
@@ -41,11 +40,125 @@
                 <a class="nav-link mx-2 w-100 " href="index.html">الصفحة الرئيسية</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2 w-100" href="about.html">من نحن؟</a>
+                <a class="nav-link mx-2 w-100" href="howUS.html">من نحن؟</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2 w-100" href="about.html">هدفنا</a>
+                <a class="nav-link mx-2 w-100" href="store.html">السوق </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 w-100" href="contact.html">التواصل</a>
+              </li>
+              <li class="nav-item">
+                <!--Modal: Login / Register Form-->
+  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+      <!--Content-->
+      <div class="modal-content">
+  
+        <!--Modal cascading tabs-->
+        <div class="modal-c-tabs pt-1 pb-1 ">
+  
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3 d-flex justify-content-center" role="tablist">
+            <li class="nav-item pr-1 ">
+              <a class="nav-link active bg-dark login light-blue text-black" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                تسجيل دخول</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-dark login text-black" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                تسجيل دخول حساب جديد</a>
+            </li>
+          </ul>
+  
+          <!-- Tab panels -->
+          <div class="tab-content">
+            <!--Panel 7-->
+            <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+  
+              <!--Body-->
+              <div class="modal-body mb-1">
+                <div class="md-form form-sm mb-5">
+                  <i class="fas fa-envelope prefix"></i>
+                  <label data-error="wrong" data-success="right" for="modalLRInput10">الايميل</label>
+                  <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                </div>
+  
+                <div class="md-form form-sm mb-4">
+                  <i class="fas fa-lock prefix"></i>
+                  <label data-error="wrong" data-success="right" for="modalLRInput11">الرقم السري</label>
+                  <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                </div>
+                <div class="text-center mt-2">
+                  <button class="btn btn-info">تسجيل دخول <i class="fas fa-sign-in ml-1"></i></button>
+                </div>
+              </div>
+              <!--Footer-->
+              <div class="modal-footer">
+                <div class="options text-center text-md-right mt-1">
+                  <p>ليس لديك حساب؟ <a href="#" class="blue-text">تسجيل دخول</a></p>
+                  <p>فقدت <a href="#" class="blue-text">الرقم السري؟</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info waves-effect mr-auto" data-dismiss="modal">اغلاق</button>
+              </div>
+  
+            </div>
+            <!--/.Panel 7-->
+  
+            <!--Panel 8-->
+            <div class="tab-pane fade" id="panel8" role="tabpanel">
+  
+              <!--Body-->
+              <div class="modal-body">
+                <div class="md-form form-sm mb-5">
+                  <i class="fas fa-envelope prefix"></i>
+                  <label data-error="wrong" data-success="right" for="modalLRInput12">الايميل</label>
+                  <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                </div>
+  
+                <div class="md-form form-sm mb-5">
+                  <i class="fas fa-lock prefix"></i>
+                  <label data-error="wrong" data-success="right" for="modalLRInput13">الرقم السري</label>
+                  <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                </div>
+  
+                <div class="md-form form-sm mb-4">
+                  <i class="fas fa-lock prefix"></i>
+                  <label data-error="wrong" data-success="right" for="modalLRInput14">اعادة كتابة الرقم السري</label>
+                  <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                </div>
+  
+                <div class="text-center form-sm mt-2">
+                  <button class="btn btn-info">تسجيل <i class="fas fa-sign-in ml-1"></i></button>
+                </div>
+  
+              </div>
+              <!--Footer-->
+              <div class="modal-footer">
+                <div class="options text-right">
+                  <p class="pt-1">لديك حساب؟ <a href="#" class="">تسجيل دخول</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">اغلاق</button>
+              </div>
+            </div>
+            <!--/.Panel 8-->
+          </div>
+  
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Modal: Login / Register Form-->
+  
+  <div class="">
+    <a href="" class="btn btn-danger btn-rounded text-white" data-toggle="modal" data-target="#modalLRForm">تسجيل دخول</a>
+  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  
             </ul>
           </div>
         </div>
@@ -75,11 +188,13 @@
 
       <section>
           <!-- store -->
-          <div class="text-center">
+          <div data-aos="fade-up"
+          data-aos-duration="3000" class="text-center">
             <div class="container-fluid">
-              <h1 class="title text-center mt-4">السوق</h1>
+              <h1 class="title text-center mt-5 mb-4">السوق</h1>
               <p class="subtitle"> سوق لبيع وشراء وتبادل بين المشتركين </p>
-              <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4">
+              <div data-aos="fade-up"
+              data-aos-duration="3000" class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4">
                 
                 <div class="col-5">
                   <div class="card card-block card-1"></div>
@@ -90,6 +205,16 @@
                 <div class="col-5">
                   <div class="card card-block card-3"></div>
                 </div>
+              </div>
+
+              <div data-aos="fade-up"
+              data-aos-duration="3000" class="container mt-5 mb-5">
+                <div class="text-center">
+                <h1 class="title text-center mt-4 mb-5">منصة مشاركة ونشر معلومات</h1>
+                <div class=" text-center">
+                  <textarea placeholder="الرسالة" class="talk text-white"></textarea>
+                </div>
+              </div>
               </div>
           <!-- footer -->
    <footer class="text-center text-white bg-dark py-5">
@@ -129,8 +254,9 @@
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/script.js"></script>
   </body>
 </html>
