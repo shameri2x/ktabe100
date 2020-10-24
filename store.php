@@ -10,20 +10,29 @@ $allshares= $conn->query("SELECT user_id,message,date FROM store ");
           <!-- store -->
           <div data-aos="fade-up"
           data-aos-duration="3000" class="text-center">
-            <div class="container-fluid">
+            <div class="container py-5 my-3">
               <h1 class="title text-center mt-5 mb-4">السوق</h1>
               <p class="subtitle"> سوق لبيع وشراء وتبادل بين المشتركين </p>
-              <div data-aos="fade-up"
-              data-aos-duration="3000" class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4">
+              <div data-aos="fade-up"  data-aos-duration="3000" class="scrolling-wrapper flex-row flex-nowrap mt-4 pb-4">
 
-                <div class="col-5">
-                  <div class="card card-block card-1"></div>
-                </div>
-                <div class="col-5">
-                  <div class="card card-block card-2"></div>
-                </div>
-                <div class="col-5">
-                  <div class="card card-block card-3"></div>
+                <div class="row">
+                  <div class="col-md-4 mb-2">
+                    <div class="w-100">
+                      <img src="/imgs/codebook.jpg" class="img-fluid" alt="Img">
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 mb-2">
+                    <div class="w-100">
+                    <img src="/imgs/codebook2.jpg" class="img-fluid" alt="Img">
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 mb-2">
+                    <div class=" w-100">
+                       <img src="/imgs/codebook3.jpg" class="img-fluid" alt="Img">
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -53,8 +62,8 @@ $allshares= $conn->query("SELECT user_id,message,date FROM store ");
                   <?php } ?>
                 </div>
 
-                <div class="text-center mt-5 d-flex justify-content-center">
-                  <div class="card" style="width: 18rem;">
+                <div class="text-center mt-5 d-flex justify-content-center py-5 my-3">
+                  <div class="card" style="min-width: 20rem;">
                     <div class="card-body">
                       <h5 class="card-title"><i class="fal fa-share-alt"></i> تقديم مشاركة</h5>
                       <form class="shareContent" id="sharForm" data-parsley-validate="" data-parsley-required-message="هذا الحقل مطلوب">

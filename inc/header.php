@@ -76,9 +76,13 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
               <li class="nav-item">
                 <a class="nav-link mx-2 w-100" href="/howUS.php">من نحن؟</a>
               </li>
+
+              
               
               <?php if(!isset($_SESSION['memberId:rpg']) and !isset($nologin)){ ?>
-
+                <li class="nav-item d-none" id="storeBtnNav">
+                      <a class="nav-link mx-2 w-100" href="/store.php"> المنتجات </a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link mx-2 w-100" href="/contact.php">التواصل</a>
               </li>
@@ -112,9 +116,9 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
                 } else {
                   if(isset($clientnickname)) {
                     ?>
-                    <li class="nav-item">
+                    <li class="nav-item " id="storeBtnNav">
                       <a class="nav-link mx-2 w-100" href="/store.php"> المنتجات </a>
-                    </li>
+              </li>
                     <li class="nav-item">
                       <a class="nav-link mx-2 w-100" href="/contact.php">التواصل</a>
                     </li>

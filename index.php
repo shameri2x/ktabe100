@@ -33,7 +33,7 @@ require_once("inc/header.php");
               <div class="card border-0 bg-none text-left" style="width:100%">
                 <div class=" position-relative">
                   <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
-                    <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
+                    <a href="/soon.php" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                   </div>
                   <img src="imgs/codingbook.jpg" class="img-fluid w-100" alt="Movie">
                 </div>
@@ -51,7 +51,7 @@ require_once("inc/header.php");
               <div class="card border-0 bg-none text-left" style="width:100%">
                 <div class=" position-relative">
                   <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
-                    <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
+                    <a href="/soon.php" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                   </div>
                   <img src="imgs/coodingbook7.jpg" class="img-fluid w-100" alt="Movie">
                 </div>
@@ -59,7 +59,6 @@ require_once("inc/header.php");
                 <div class="card-body px-0">
                   <h2>افضل الكتب</h2>
                   <h5 class="card-title mb-1">اسم الكتاب</h5>
-                  <p class="card-text text-muted">المؤلف</p>
                 </div>
               </div>
             </div>
@@ -69,7 +68,7 @@ require_once("inc/header.php");
               <div class="card border-0 bg-none text-left" style="width:100%">
                 <div class=" position-relative">
                   <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
-                    <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
+                    <a href="/soon.php" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                   </div>
                   <img src="imgs/codingbook5.jpg" class="img-fluid w-100" alt="Movie">
                 </div>
@@ -77,7 +76,6 @@ require_once("inc/header.php");
                 <div class="card-body px-0">
                   <h2>افضل الكتب</h2>
                   <h5 class="card-title mb-1">اسم الكتاب</h5>
-                  <p class="card-text text-muted">المؤلف</p>
                 </div>
               </div>
             </div>
@@ -87,7 +85,7 @@ require_once("inc/header.php");
            <div class="card border-0 bg-none text-left" style="width:100%">
              <div class=" position-relative">
                <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
-                 <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
+                 <a href="/soon.php" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                </div>
                <img src="imgs/codingbook4.jpg" class="img-fluid w-100" alt="Movie">
              </div>
@@ -95,7 +93,6 @@ require_once("inc/header.php");
              <div class="card-body px-0">
                <h2>افضل الكتب</h2>
                <h5 class="card-title mb-1">اسم الكتاب</h5>
-               <p class="card-text text-muted">المؤلف</p>
              </div>
            </div>
          </div>
@@ -135,24 +132,22 @@ require_once("inc/header.php");
           <div class="row mt-5">
 
             <div data-aos="fade-up"
-            data-aos-duration="3000"class="col-md-4 mb-4">
+            data-aos-duration="3000"class="col-md-3 mb-4">
               <div class="card border-0 bg-none text-left " style="width:100%;">
-                <a href="https://www.thewrap.com/amazons-jack-reacher-finds-its-jack-reacher/" target="_blank"><img src="imgs/codebook2.jpg" class="card-img-top" alt="new"></a>
+                <a href="https://www.amazon.com/dp/1680506609?tag=uuid10-20" target="_blank"><img src="imgs/news.jpg" class="card-img-top" alt="new"></a>
                 <div class="card-body px-0">
-                  <h5 class="card-title mb-1">الكتاب</h5>
-                  <p class="card-text text-muted mb-2">تم تصدير الكتب ومتوفر في جميع المكاتب</p>
+                  <h5 class="card-title mb-1">PYTHON PROGRAMMING: 3 BOOKS IN 1: The Complete guide to Learn Everything you Need to Know about Python Paperback – April 20, 2020</h5>
                   <p class="card-text"> مصدر الخبر اضغط على الصورة</p>
                 </div>
               </div>
             </div>
 
             <div data-aos="fade-up"
-            data-aos-duration="3000"class="col-md-4 mb-4">
+            data-aos-duration="3000"class="col-md-3 mb-4">
               <div class="card border-0 bg-none text-left " style="width:100%;">
-                <a href="https://www.thewrap.com/amazons-jack-reacher-finds-its-jack-reacher/" target="_blank"><img src="imgs/codebook2.jpg" class="card-img-top" alt="new"></a>
+                <a href="https://www.amazon.com/dp/B087CRNF1W?tag=uuid10-20" target="_blank"><img src="imgs/news2.jpg" class="card-img-top" alt="new"></a>
                 <div class="card-body px-0">
-                  <h5 class="card-title mb-1">الكتاب</h5>
-                  <p class="card-text text-muted mb-2">تم تصدير الكتب ومتوفر في جميع المكاتب</p>
+                  <h5 class="card-title mb-1">C++20 Recipes: A Problem-Solution Approach 2nd ed. Edition</h5>
                   <p class="card-text"> مصدر الخبر اضغط على الصورة</p>
                 </div>
               </div>
@@ -160,24 +155,22 @@ require_once("inc/header.php");
 
 
             <div data-aos="fade-up"
-            data-aos-duration="3000"class="col-md-4 mb-4">
+            data-aos-duration="3000"class="col-md-3 mb-4">
               <div class="card border-0 bg-none text-left " style="width:100%;">
-                <a href="https://www.thewrap.com/amazons-jack-reacher-finds-its-jack-reacher/" target="_blank"><img src="imgs/codebook2.jpg" class="card-img-top" alt="new"></a>
+                <a href="https://www.amazon.com/dp/148425712X?tag=uuid10-20" target="_blank"><img src="imgs/news3.jpg" class="card-img-top" alt="new"></a>
                 <div class="card-body px-0">
-                  <h5 class="card-title mb-1">الكتاب</h5>
-                  <p class="card-text text-muted mb-2">تم تصدير الكتب ومتوفر في جميع المكاتب</p>
+                  <h5 class="card-title mb-1">Beginning PyQt: A Hands-on Approach to GUI Programming 1st ed. Edition</h5>
                   <p class="card-text"> مصدر الخبر اضغط على الصورة</p>
                 </div>
               </div>
             </div>
 
             <div data-aos="fade-up"
-            data-aos-duration="3000"class="col-md-4 mb-4">
+            data-aos-duration="3000"class="col-md-3 mb-4">
               <div class="card border-0 bg-none text-left " style="width:100%;">
-                <a href="https://www.thewrap.com/amazons-jack-reacher-finds-its-jack-reacher/" target="_blank"><img src="imgs/codebook2.jpg" class="card-img-top" alt="new"></a>
+                <a href="https://www.amazon.com/dp/1484258568?tag=uuid10-20" target="_blank"><img src="imgs/new4.jpg" class="card-img-top" alt="new"></a>
                 <div class="card-body px-0">
-                  <h5 class="card-title mb-1">الكتاب</h5>
-                  <p class="card-text text-muted mb-2">تم تصدير الكتب ومتوفر في جميع المكاتب</p>
+                  <h5 class="card-title mb-1">Programming Machine Learning: From Coding to Deep Learning 1st Editions</h5>
                   <p class="card-text"> مصدر الخبر اضغط على الصورة</p>
                 </div>
               </div>

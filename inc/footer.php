@@ -149,15 +149,16 @@
 
                     });
                     animateCSS('.dropdown', "fadeIn").then((message) => {
-                        $(".dropdown").html(
-                          '<a href="" class="nav-link text-white navLogin" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' + response.name + '</a>'
-                          + '<div class="dropdown">'
-                          +'<div class="dropdown-menu dropdown-menu-right"  aria-labelledby="dLabel">'
-                          +' <a href="logout.php" class="dropdown-item" style="color:black !important">تسجيل الخروج</a>'
-                          +'</div>'
-                          + '</div>'
-                          );
-                        $(".dropdown").removeClass("d-none");
+                      $('#storeBtnNav').removeClass('d-none');
+                      $(".dropdown").html(
+                        '<a href="" class="nav-link text-white navLogin" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' + response.name + '</a>'
+                        + '<div class="dropdown">'
+                        +'<div class="dropdown-menu dropdown-menu-right"  aria-labelledby="dLabel">'
+                        +' <a href="logout.php" class="dropdown-item" style="color:black !important">تسجيل الخروج</a>'
+                        +'</div>'
+                        + '</div>'
+                        );
+                      $(".dropdown").removeClass("d-none");
 
                     });
 

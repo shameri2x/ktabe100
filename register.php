@@ -3,14 +3,12 @@ $withOutProtection = true;
 $nologin = true;
 include 'inc/header.php';
 ?>
-
-
     <section>
       <div class="register d-flex justify-content-center align-items-center my-5">
         <div class="container">
           <div class="content text-center">
             <img src="imgs/logo.png" alt="Logo">
-    		  <form id="registerform" data-parsley-validate="" data-parsley-required-message="هذا الحقل مطلوب">
+    		   <form id="registerform" data-parsley-validate="" data-parsley-required-message="هذا الحقل مطلوب">
               <div class="form-row">
                 <div class="col-md-12 mt-2">
                   <input type="text" class="form-control" name="username" id="username" placeholder="الإسم الكامل"  data-parsley-trigger="keyup" data-parsley-minlength="6" data-parsley-minlength-message="يجب عليك كتابة ستة أحرف على الأقل" required>
@@ -41,24 +39,22 @@ include 'inc/header.php';
         </div>
       </div>
     </section>
-
     <?php require_once 'inc/footer.php' ?>
     <script>
          $('#registerform').parsley();
          $("#registerform").submit(function(e) {
            e.preventDefault();
            var form = $(this);
-
            if($('#registerform').parsley().isValid())
            {
-    		 if (grecaptcha === undefined) {
-    			Swal.fire({
-    			  title: "خطأ",
-    			  text: "من فضلك تحقق من أنك لست روبوت",
-    			  type: "error"
-    			});
-    			throw new Error("Empty RECAPTCHA");
-    		}
+              if (grecaptcha === undefined) {
+                Swal.fire({
+                  title: "خطأ",
+                  text: "من فضلك تحقق من أنك لست روبوت",
+                  type: "error"
+                });
+                throw new Error("Empty RECAPTCHA");
+              }
 
     		var response = grecaptcha.getResponse();
     		if (!response) {
@@ -69,7 +65,6 @@ include 'inc/header.php';
     			});
     			throw new Error("Robot Check");
     		}
-
              sendData("reg.php", form.serialize())
                .then(function(response)
                {
@@ -89,11 +84,11 @@ include 'inc/header.php';
                  }
                  else if(response.tp == 'success')
                  {
-    			   setTimeout(function () { location.href = "./";}, 3000);
+    			          setTimeout(function () { location.href = "./";}, 3000);
                  }else{
-    				grecaptcha.reset();
-    			 }
-               });
+    				      grecaptcha.reset();
+    			      }
+            });
            }
          });
     </script>
