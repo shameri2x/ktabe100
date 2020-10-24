@@ -40,8 +40,7 @@ require_once("inc/header.php");
 
                 <div class="card-body px-0">
                   <h2>افضل الكتب</h2>
-                  <h5 class="card-title mb-1">اسم الكتاب</h5>
-                  <p class="card-text text-muted">المؤلف</p>
+                  <h5 class="card-title mb-1">The pragmatic programmer </h5>
                 </div>
               </div>
             </div>
@@ -58,7 +57,7 @@ require_once("inc/header.php");
 
                 <div class="card-body px-0">
                   <h2>افضل الكتب</h2>
-                  <h5 class="card-title mb-1">اسم الكتاب</h5>
+                  <h5 class="card-title mb-1">Python programming </h5>
                 </div>
               </div>
             </div>
@@ -75,7 +74,7 @@ require_once("inc/header.php");
 
                 <div class="card-body px-0">
                   <h2>افضل الكتب</h2>
-                  <h5 class="card-title mb-1">اسم الكتاب</h5>
+                  <h5 class="card-title mb-1">Computer programming</h5>
                 </div>
               </div>
             </div>
@@ -92,7 +91,7 @@ require_once("inc/header.php");
 
              <div class="card-body px-0">
                <h2>افضل الكتب</h2>
-               <h5 class="card-title mb-1">اسم الكتاب</h5>
+               <h5 class="card-title mb-1">structure and interpretation of computer programs</h5>
              </div>
            </div>
          </div>
@@ -168,7 +167,7 @@ require_once("inc/header.php");
             <div data-aos="fade-up"
             data-aos-duration="3000"class="col-md-3 mb-4">
               <div class="card border-0 bg-none text-left " style="width:100%;">
-                <a href="https://www.amazon.com/dp/1484258568?tag=uuid10-20" target="_blank"><img src="imgs/new4.jpg" class="card-img-top" alt="new"></a>
+                <a href="https://www.amazon.com/dp/1484258568?tag=uuid10-20" target="_blank"><img src="imgs/news4.jpg" class="card-img-top" alt="new"></a>
                 <div class="card-body px-0">
                   <h5 class="card-title mb-1">Programming Machine Learning: From Coding to Deep Learning 1st Editions</h5>
                   <p class="card-text"> مصدر الخبر اضغط على الصورة</p>
