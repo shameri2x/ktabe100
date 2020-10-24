@@ -1,11 +1,21 @@
 /* basics */
-body {background-color: #fafafa; color: #333; font-family: Georgia, 'Times New Roman', Times, serif,'system-ui';}
+@font-face {
+  font-family: "JF Flat Regular";
+  src: url('../fonts/JF-Flat-regular.eot');
+  src: url('../fonts/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+  url('../fonts/JF-Flat-regular.woff') format('woff'),
+  url('../fonts/JF-Flat-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {background-color: #fafafa; color: #333;   font-family: "JF Flat Regular", Arial, sans-serif !important; }
 a {color: inherit !important; text-decoration: none !important;}
 a:hover{color: red !important;}
 .bg-dark {background-color: #333 !important;}
 .bg-none {background-color: transparent !important;}
 .navbar a:hover{color: white !important;}
-
 .btn-primary {
     background: #e03f34 !important;
     border: none;
@@ -16,6 +26,7 @@ a:hover{color: red !important;}
     width: 6em !important;
     padding: 8px;
   }
+
 .btn-primary:hover {background-color: #d44b42 !important;}
 .btn-primary:active,.btn-primary:focus {box-shadow: 0 0 0 .2rem rgba(212, 75, 66, 0.5) !important;}
 
@@ -41,7 +52,7 @@ a:hover{color: red !important;}
 
 /* header section */
 header {
-    background-image: url(./imgs/Landing+Header.png);
+    background-image: url(../imgs/LandingHeader.png);
     background-position: top;
     background-size: cover;
     min-height: 35vh;
@@ -91,7 +102,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 
 /* newsletter section */
 .newsletter {
-    background-image: url(./imgs/headerbook.jpg);
+    background-image: url(../imgs/headerbook.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -156,19 +167,19 @@ h1{
 }
 
 .card-1{
-    background-image:url(./imgs/codebook.jpg);
+    background-image:url(../imgs/codebook.jpg);
 }
 
 .card-2{
-    background-image:url(./imgs/codebook.jpg);
+    background-image:url(../imgs/codebook.jpg);
 }
 
 .card-3{
-    background-image:url(./imgs/codebook.jpg);
+    background-image:url(../imgs/codebook.jpg);
 }
 
 .card-4{
-	background-image:url(./imgs/codebook.jpg);
+	background-image:url(../imgs/codebook.jpg);
 }
 .talk,input,textarea{
     color: rgb(0, 0, 0);
@@ -176,4 +187,40 @@ h1{
 }
 
 
+/* Start Register */
 
+.register {
+  background-color: #fafafa;
+  background-image: url('../imgs/loginBG.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+  padding: 8px;
+}
+.register .content, .registrationP .content {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px rgba(117,117,117,1);
+  padding: 32px;
+}
+.register img {
+  width: 20%;
+  margin-bottom: 32px;
+}
+.register form input {
+  width: 50%;
+  margin: auto;
+}
+.register form button {
+  margin: 0;
+  font-size: 1.2em;
+  -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+  background-color: #D63767 !important;
+  color: #fff !important;
+  padding: 15px 60px;
+  border: none;
+  cursor: pointer;
+}
+/* End Register */
