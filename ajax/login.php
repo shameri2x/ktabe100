@@ -41,8 +41,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 			returnJSON(array('tp' => 'error', 't' => 'خطأ','m' => 'تاكد من المدخلات','b' => true));
 		} else if(strlen($_POST['emaillogin']) > 260){
 			returnJSON(array('tp' => 'error', 't' => 'خطأ','m' => 'تاكد من المدخلات','b' => true));
-		} else if(strlen($_POST['passlogin']) > 36 || strlen($_POST['passlogin']) < 8){
-			returnJSON(array('tp' => 'error', 't' => 'خطأ','m' => 'تاكد من المدخلات','b' => true));
 		} else if (!filter_var($_POST['emaillogin'], FILTER_VALIDATE_EMAIL)) {
 			returnJSON(array('tp' => 'error', 't' => 'خطأ','m' => 'تاكد من المدخلات','b' => true));
 

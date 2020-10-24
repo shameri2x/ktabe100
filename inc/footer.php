@@ -1,3 +1,5 @@
+</main>
+
 <!-- footer -->
 <footer class="text-center text-white bg-dark py-5">
  <div class="container">
@@ -16,27 +18,26 @@
        <i class="fab fa-youtube fa-2x"></i>
      </a>
    </section>
+
    <section class="container d-flex justify-content-center msg mt-5">
      <div class="box mb-4 p-2 d-flex flex-column  align-items-center mt-5">
-
-      <h5 style="display: flex; align-items: center; justify-content: center;" >  <span id="magic"></span> <br></h5>
-      <form class="contactus" id="contactForm" data-parsley-validate="" data-parsley-required-message="هذا الحقل مطلوب">
-        <div class="form-group d-none">
-        <input type="text" class="form-control" name="formAhmed" id="formAhmed">
-        </div>
-
-       <input type="text" name="name" class="form-control" placeholder="الإسم" data-parsley-trigger="keyup" data-parsley-minlength="4" data-parsley-minlength-message="يجب عليك كتابة ستة أحرف على الأقل" required>
-       <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" data-parsley-trigger="keyup" data-parsley-type="email" data-parsley-type-message="يجب عليك كتابة إيميل صحيح " required>
-       <textarea  name= "msg" class="form-control" placeholder="رسالتك" rows="4" required></textarea>
-       <button type="submit" class="btn btn-primary filter mt-4 form-control">إرسال</button>
-     </form>
+        <h5 style="display: flex; align-items: center; justify-content: center;" >  <span id="magic"></span> <br></h5>
+        <form class="contactus" id="contactForm" data-parsley-validate="" data-parsley-required-message="هذا الحقل مطلوب">
+          <div class="form-group d-none">
+            <input type="text" class="form-control" name="formAhmed" id="formAhmed">
+          </div>
+          <input type="text" name="name" class="form-control" placeholder="الإسم" data-parsley-trigger="keyup" data-parsley-minlength="4" data-parsley-minlength-message="يجب عليك كتابة ستة أحرف على الأقل" required>
+          <input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" data-parsley-trigger="keyup" data-parsley-type="email" data-parsley-type-message="يجب عليك كتابة إيميل صحيح " required>
+          <textarea  name= "msg" class="form-control" placeholder="رسالتك" rows="4" required></textarea>
+          <button type="submit" class="btn btn-primary filter mt-4 form-control">إرسال</button>
+      </form>
      </div>
    </section>
 
    <hr class="border-white my-4">
-  كتابي | حقوق النشر والطبع محفوظة &copy;2020
-   <br><br>
-   Developed with <span style="color: red;"><i class="fas fa-heart"></i></span> By Ahmed AlShammari 4 <a href="http://app.code.kw/" target="_blank">code.kw</a>
+    كتابي | حقوق النشر والطبع محفوظة &copy;2020
+    <br><br>
+    Developed with <span style="color: red;"><i class="fas fa-heart"></i></span> By Ahmed AlShammari 4 <a href="http://app.code.kw/" target="_blank">code.kw</a>
  </div>
 </footer>
 
@@ -50,6 +51,12 @@
  <script src="js/parsley.js"></script>
  <script src="js/tw.js"></script>
  <script src="js/script.js"></script>
+ <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+  <script>
+  const swup = new Swup();
+  init2();
+  swup.on('contentReplaced', init2);
+  </script>
  <script>
 
       $('#contactForm').parsley();
@@ -95,81 +102,73 @@
         }
       });
 
-
-
-
-
-
-
-
  new TypeIt('#magic', {
   strings: 'تواصل معنا',
-  speed: 300,
+  speed: 200,
   loop: false,
-  loopDelay: 2500,
+  loopDelay: 1500,
   waitUntilVisible: true
 }).go();
 
-
-
-
  $('#loginform').parsley();
  $("#loginform").submit(function(e) {
-   e.preventDefault();
-   var form = $(this);
+    e.preventDefault();
+    var form = $(this);
 
-   if($('#loginform').parsley().isValid())
-   {
- if (grecaptcha === undefined) {
-   new toast({
-    type: 'info',
-    title: 'من فضلك تحقق من أنك لست روبوت'
-  });
-  throw new Error("Empty RECAPTCHA");
-}
+    if ($('#loginform').parsley().isValid()) {
+        if (grecaptcha === undefined) {
+            new toast({
+                type: 'info',
+                title: 'من فضلك تحقق من أنك لست روبوت'
+            });
+            throw new Error("Empty RECAPTCHA");
+        }
 
-var response = grecaptcha.getResponse();
-if (!response) {
-   new toast({
-    type: 'info',
-    title: 'من فضلك تحقق من أنك لست روبوت'
-  });
-  throw new Error("Robot Check");
-}
+        var response = grecaptcha.getResponse();
+        if (!response) {
+            new toast({
+                type: 'info',
+                title: 'من فضلك تحقق من أنك لست روبوت'
+            });
+            throw new Error("Robot Check");
+        }
 
-     sendData("login.php", form.serialize())
-       .then(function(response)
-       {
-   new toast({
-    type: response.tp,
-    title: response.m
-  });
+        sendData("login.php", form.serialize())
+            .then(function(response) {
+                new toast({
+                    type: response.tp,
+                    title: response.m
+                });
 
-         if(response.tp == 'error')
-         {
-    grecaptcha.reset();
+                if (response.tp == 'error') {
+                    grecaptcha.reset();
 
-         }
-         else if(response.tp == 'success')
-         {
-           animateCSS('.dropdown', "fadeOut").then((message) => {
-             $(".dropdown").addClass("d-none");
+                } else if (response.tp == 'success') {
+                    animateCSS('.dropdown', "fadeOut").then((message) => {
+                        $(".dropdown").addClass("d-none");
 
-           });
-           animateCSS('.dropdown', "fadeIn").then((message) => {
-             $(".dropdown").html('<p class="text-white">'+response.name+'</p>');
-           $(".dropdown").removeClass("d-none");
+                    });
+                    animateCSS('.dropdown', "fadeIn").then((message) => {
+                        $(".dropdown").html(
+                          '<a href="" class="nav-link text-white navLogin" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' + response.name + '</a>'
+                          + '<div class="dropdown">'
+                          +'<div class="dropdown-menu dropdown-menu-right"  aria-labelledby="dLabel">'
+                          +' <a href="logout.php" class="dropdown-item" style="color:black !important">تسجيل الخروج</a>'
+                          +'</div>'
+                          + '</div>'
+                          );
+                        $(".dropdown").removeClass("d-none");
 
-           });
+                    });
 
 
 
-     }else{
-    grecaptcha.reset();
-   }
-       });
-   }
- });
+                } else {
+                    grecaptcha.reset();
+                }
+            });
+    }
+});
 
 
  <?php if(isset($_GET['status']) && $_GET['status'] == 1) { ?>

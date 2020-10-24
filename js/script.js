@@ -39,8 +39,75 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     node.addEventListener('animationend', handleAnimationEnd);
 });
 
+function init2() {
 
 AOS.init();
+
+$(document).ready(function() {
+  var options = {  
+    useEasing: true,
+      useGrouping: true,
+      separator: ',',
+      decimal: '.',
+      prefix: '',
+      suffix: ''
+  };
+  $('.countupthis').each(function() {
+    var num = $(this).attr('numx'); //end count
+    var nuen = $(this).text();
+    if (nuen === "") {
+      nuen = 0;
+    }
+    var counts = new CountUp(this, nuen, num, 0, 8, options);
+    counts.start();
+  });
+
+
+});
+$('#sharForm').parsley();
+$("#sharForm").submit(function(e) {
+  e.preventDefault();
+  var form = $(this);
+
+  if($('#sharForm').parsley().isValid())
+  {
+
+    sendData("store.php", form.serialize())
+      .then(function(response)
+      {
+        Swal.fire(
+          {
+            title: response.t,
+            text: response.m,
+            type: response.tp,
+            showConfirmButton: response.b,
+            confirmButtonText: 'حسناً'
+          });
+
+         if(response.tp == 'success')
+        {
+          $('#sharForm')[0].reset();
+          $('#sharForm').parsley().reset();
+          animateCSS('.contactus', "fadeOut").then((message) => {
+
+            $(".shareContent").addClass("d-none");
+
+          });
+          animateCSS('.shareContent', "fadeIn").then((message) => {
+            $(".shareContent").html(response.m);
+
+            $(".shareContent").removeClass("d-none");
+
+          });
+
+
+        }
+
+      });
+  }
+});
+
+}
 
 
 var xmlhttp;
@@ -93,24 +160,3 @@ timer: 3000
 });
 
 
-$(document).ready(function() {
-  var options = {  
-    useEasing: true,
-      useGrouping: true,
-      separator: ',',
-      decimal: '.',
-      prefix: '',
-      suffix: ''
-  };
-  $('.countupthis').each(function() {
-    var num = $(this).attr('numx'); //end count
-    var nuen = $(this).text();
-    if (nuen === "") {
-      nuen = 0;
-    }
-    var counts = new CountUp(this, nuen, num, 0, 8, options);
-    counts.start();
-  });
-
-
-});

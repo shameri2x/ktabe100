@@ -121,7 +121,6 @@ function ago(int $i){
 			}else{}
 
 			break;
-			//$o="$v $u".($v==1?'':'').''; break;
 		}
     }
 
@@ -133,18 +132,12 @@ function ago(int $i){
 
 
 function returnJSON(array $f,bool $updateToken = true) {
-	  /*
-		  Usage:
-		  returnJSON(array(params));
-	  */
-	  if(!is_array($f)){ exit; }
-	  if($updateToken){
-		  $f['updatetoken'] = tokenHandler();
-	  }
-		  header('Content-Type: application/json');
-
-		  exit(json_encode($f));
-
+	if(!is_array($f)){ exit; }
+	if($updateToken){
+		$f['updatetoken'] = tokenHandler();
+	}
+	header('Content-Type: application/json');
+	exit(json_encode($f));
 }
 
 function password_strength($password) {

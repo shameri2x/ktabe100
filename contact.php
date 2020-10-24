@@ -4,12 +4,10 @@ require_once('inc/req.php');
 $req = true;
 require_once("inc/header.php");
 ?>
-
     <section>
-        <div data-aos="fade-up"
-        data-aos-duration="3000" class="movies py-5 text-center">
+        <div data-aos="fade-up" data-aos-duration="3000" class="movies my-5 py-5 text-center">
             <div class="container">
-              <h2 class="title mb-3">التواصل </h2>
+              <h2 class="title mb-4">التواصل </h2>
               <p>للتواصل او الدعم <br> حسابات التواصل الإجتماعي حياكم الله <br> لتقديم خدمة أفضل</p>
               <div data-aos="fade-up"
               data-aos-duration="3000" class="mt-5">

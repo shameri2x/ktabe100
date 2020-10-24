@@ -1,29 +1,26 @@
 <?php
-if(count(get_included_files()) == 1){
-	header('HTTP/1.0 403 Forbidden');
-	exit;
-}
-require 'req.php';
-if(isset($nologin)){
-
-	if(isset($_SESSION['memberId:rpg'])){
-	exit(header('Location: index.php'));
-}else{}
-
-
+  if(count(get_included_files()) == 1){
+    header('HTTP/1.0 403 Forbidden');
+    exit;
+  }
+  
+  require 'req.php';
+  if(isset($nologin)){
+    if(isset($_SESSION['memberId:rpg'])){
+    exit(header('Location: index.php'));
+  }
 }
 if(isset($_SESSION['memberId:rpg'])){
 
-$conn = Database::getInstance();
-$sql = $conn->query("SELECT username,email,createdTime FROM Customers WHERE id='{$_SESSION['memberId:rpg']}'");
+  $conn = Database::getInstance();
+  $sql = $conn->query("SELECT username,email,createdTime FROM Customers WHERE id='{$_SESSION['memberId:rpg']}'");
 
-if($sql->rowCount() > 0){
-
-	$row = $sql->fetch();
-		$clientnickname = htmlspecialchars($row['username']);
-		$clientemail = htmlspecialchars($row['email']);
-		$clienttime = $row['createdTime'];
-}
+  if($sql->rowCount() > 0){
+      $row = $sql->fetch();
+      $clientnickname = htmlspecialchars($row['username']);
+      $clientemail = htmlspecialchars($row['email']);
+      $clienttime = $row['createdTime'];
+  }
 }
 
 if(!isset($_SESSION['_token'])) {
@@ -74,28 +71,27 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
           <div class="collapse navbar-collapse" id="movNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link mx-2 w-100 " href="index.php">الصفحة الرئيسية</a>
+                <a class="nav-link mx-2 w-100 " href="/">الصفحة الرئيسية</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2 w-100" href="howUS.php">من نحن؟</a>
+                <a class="nav-link mx-2 w-100" href="/howUS.php">من نحن؟</a>
               </li>
+              
+              <?php if(!isset($_SESSION['memberId:rpg']) and !isset($nologin)){ ?>
+
               <li class="nav-item">
-                <a class="nav-link mx-2 w-100" href="store.php">السوق </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 w-100" href="contact.php">التواصل</a>
+                <a class="nav-link mx-2 w-100" href="/contact.php">التواصل</a>
               </li>
 							<li class="nav-item">
-              <?php if(!isset($_SESSION['memberId:rpg']) and !isset($nologin)){ ?>
 								<div class="dropdown">
-									<a href="" class="btn btn-danger btn-rounded text-white navLogin" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تسجيل دخول</a>
+									<a href="" class="btn btn-primary text-white navLogin" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تسجيل دخول</a>
 					        <div class="dropdown-menu dropdown-menu-right"  aria-labelledby="dLabel">
-							  <form class="px-4 py-3 clearfix" id="loginform" data-parsley-validate="" data-parsley-required-message="هذا الحقل مطلوب">
-
+                  <form class="px-4 py-3 clearfix" id="loginform" data-parsley-validate="" data-parsley-required-message="هذا الحقل مطلوب">
 					            <div class="form-group">
 					              <label for="emaillogin">البريد الإلكتروني</label>
 					              <input type="email" class="form-control" name="emaillogin" id="emaillogin" data-parsley-trigger="keyup" data-parsley-type="email" data-parsley-type-message="يجب عليك كتابة إيميل صحيح " required>
 					            </div>
+
 					            <div class="form-group">
 					              <label for="passwordlogin">كلمة المرور</label>
 					              <input type="password" class="form-control" name="passlogin" id="passlogin" data-parsley-trigger="keyup" required>
@@ -108,24 +104,32 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
 					            <button type="submit" class="btn btn-primary float-right">تسجيل دخول</button>
 					          </form>
 					          <div class="dropdown-divider"></div>
-					          <a class="dropdown-item" href="register.php">لا تملك حساب؟</a>
+					          <a class="dropdown-item" style="color:black !important" href="/register.php">لا تملك حساب؟</a>
 					        </div>
 					      </div>
 
               <?php
-              }else{
-              	if(isset($clientnickname)){
-              echo '<p class="text-white d-flex justify-content-right">'.$clientnickname.'</p>';
-              	}
-              }
+                } else {
+                  if(isset($clientnickname)) {
+                    ?>
+                    <li class="nav-item">
+                      <a class="nav-link mx-2 w-100" href="/store.php"> المنتجات </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link mx-2 w-100" href="/contact.php">التواصل</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="" class="nav-link text-white navLogin" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$clientnickname?></a>
+                    <div class="dropdown">
+                      <div class="dropdown-menu dropdown-menu-right"  aria-labelledby="dLabel">
+                       <a href="logout.php" class="dropdown-item" style="color:black !important">تسجيل الخروج</a>
+					            </div>
+					           </div>
+                    <?php
+                  }
+                }
               ?>
 						</li>
-
-            <?php if(isset($_SESSION['memberId:rpg'])){ ?>
-            		<li class="nav-item">
-                      <a href="logout.php" class="btn btn-danger btn-rounded text-white">تسجيل الخروج</a>
-                    </li>
-                  <?php } ?>
             </ul>
           </div>
         </div>
@@ -139,15 +143,16 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
           </ol>
           <div class="carousel-inner text-center text-white  py-5 h-100">
             <div class="carousel-item h-100 active">
+              <h1>اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</h1>
+              <p>سورة العلق [1]</p>
+            </div>
+            <div class="carousel-item h-100 ">
               <h1>اهلا بكم</h1>
               <p>حياكم الله في منصة كتابي</p>
-            </div>
-            <div class="carousel-item h-100">
-              <h1>اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</h1>
-              <p>أستمتع!</p>
             </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <main id="swup" class="transition-fade" data-swup="0">

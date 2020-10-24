@@ -9,7 +9,17 @@
   font-weight: normal;
   font-style: normal;
 }
-
+/* =====(Swup)===== */
+.transition-fade {
+    transition: 0.4s;
+    opacity: 1;
+  }
+  
+  html.is-animating .transition-fade {
+    opacity: 0;
+  }
+  /* =====(End Swup)===== */
+  
 body {background-color: #fafafa; color: #333;   font-family: "JF Flat Regular", Arial, sans-serif !important; }
 a {color: inherit !important; text-decoration: none !important;}
 a:hover{color: red !important;}
@@ -23,7 +33,7 @@ a:hover{color: red !important;}
     outline: none !important;
     width: auto !important;
     border-radius: 5px;
-    width: 6em !important;
+    min-width: 2em !important;
     padding: 8px;
   }
 
@@ -168,18 +178,20 @@ h1{
 
 .card-1{
     background-image:url(../imgs/codebook.jpg);
+    width: 33.33%;
+    height: 250px;
 }
 
 .card-2{
-    background-image:url(../imgs/codebook.jpg);
+    background-image:url(../imgs/codebook2.jpg);
+    width: 33.33%;
+    height: 250px;
 }
 
 .card-3{
-    background-image:url(../imgs/codebook.jpg);
-}
-
-.card-4{
-	background-image:url(../imgs/codebook.jpg);
+    background-image:url(../imgs/codebook3.jpg);
+    width: 33.33%;
+    height: 250px;
 }
 .talk,input,textarea{
     color: rgb(0, 0, 0);

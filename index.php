@@ -35,7 +35,7 @@ require_once("inc/header.php");
                   <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
                     <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                   </div>
-                  <img src="imgs/codebook.jpg" class="img-fluid w-100" alt="Movie">
+                  <img src="imgs/codingbook.jpg" class="img-fluid w-100" alt="Movie">
                 </div>
 
                 <div class="card-body px-0">
@@ -53,7 +53,7 @@ require_once("inc/header.php");
                   <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
                     <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                   </div>
-                  <img src="imgs/codebook.jpg" class="img-fluid w-100" alt="Movie">
+                  <img src="imgs/coodingbook7.jpg" class="img-fluid w-100" alt="Movie">
                 </div>
 
                 <div class="card-body px-0">
@@ -71,7 +71,7 @@ require_once("inc/header.php");
                   <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
                     <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                   </div>
-                  <img src="imgs/codebook.jpg" class="img-fluid w-100" alt="Movie">
+                  <img src="imgs/codingbook5.jpg" class="img-fluid w-100" alt="Movie">
                 </div>
 
                 <div class="card-body px-0">
@@ -89,7 +89,7 @@ require_once("inc/header.php");
                <div class="movies-hover h-100 w-100 position-absolute d-flex align-items-center justify-content-center">
                  <a href="ohf.html" target="_blank"><i class="far fa-play-circle fa-3x"></i></a>
                </div>
-               <img src="imgs/codebook.jpg" class="img-fluid w-100" alt="Movie">
+               <img src="imgs/codingbook4.jpg" class="img-fluid w-100" alt="Movie">
              </div>
 
              <div class="card-body px-0">

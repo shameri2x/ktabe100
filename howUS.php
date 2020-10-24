@@ -20,25 +20,25 @@ $totalUsers = current($conn->query("SELECT count(*) FROM Customers")->fetch());
             <p class="pt-3"> منصة اعلامية ننشرالثقافة للمجتمع<br>لننجز كويت جديدة تحت رعاية مؤسسة الكويت للتقدم العلمي و اكادمية كودد <br> نتمنى لكم التوفيق والسداد </p>
              <!-- numbers -->
 
-             <div class="py-5 text-center">
+             <div class="py-5 my-3 text-center">
               <div class="container">
                 <h2 class="title mb-5">أرقامنا </h2>
                 <div class="row mt-4 mb-5">
                   <div data-aos="fade-right"class="col-md-4 mb-2">
                     <h3 class="countupthis" numx="<?=$totalUsers?>">0</h3>
-                    <p class="text-muted">عدد المشاركين</p>
+                    <p class="text-muted">عدد المسجلين</p>
                   </div>
                   <div data-aos="fade-up" class="col-md-4 mb-2">
-                    <h3>552</h3>
+                    <h3 class="countupthis" numx="51">0</h3>
                     <p class="text-muted">عدد المشاركين</p>
                   </div>
                   <div data-aos="fade-left" class="col-md-4 mb-2">
-                    <h3>552</h3>
+                    <h3 class="countupthis" numx="451">0</h3>
                     <p class="text-muted">عدد المشاركين</p>
                   </div>
                 </div>
 
-                <div data-aos="fade-down" class="text-center py-5">
+                <div data-aos="fade-down" class="text-center py-5 my-3">
                   <div class="container">
                   <h3 class="title">هدفنا</h3>
                   <p class="pt-3">

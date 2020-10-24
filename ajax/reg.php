@@ -45,14 +45,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 	if(empty($_POST['username']) OR empty($_POST['password']) OR empty($_POST['email']) ){
 		returnJSON(array('tp' => 'error', 't' => 'خطأ', 'm' => 'تاكد من المدخلات','b' => true));
-	}elseif(!preg_match("/^[A-Za-z0-9_]+$/", (string)$_POST['username'])){
-		returnJSON(array('tp' => 'error', 't' => 'خطأ', 'm' => 'يجب إن يحتوي الإسم على حروف إنجليزية وارقام','b' => true));
 	}elseif(strlen($_POST['username']) < 3 || strlen($_POST['username']) > 16){
 		returnJSON(array('tp' => 'error', 't' => 'خطأ', 'm' => 'يجب إن يكون اسم المستخدم مكون من 3 حروف ولا يتعدى 16 حرف','b' => true));
-	}elseif(!password_strength($_POST['password'])){
-		returnJSON(array('isSuccess' => false,'tp' => 'error','t' => 'خطأ','m' => 'يجب إن تحتوي كلمة المرور على حروف كبيرة وصغيره وأرقام.','s' => 'error', 'b' => 'موافق'));
-	}elseif(strlen($_POST['password']) > 36 || strlen($_POST['password']) < 8){
-		returnJSON(array('tp' => 'error', 't' => 'خطأ', 'm' => 'يجب إن تكون كلمة مرورك أكبر من 8 إحرف ولا تتعدى 36 حرف','b' => true));
 	}elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 		returnJSON(array('tp' => 'error', 't' => 'خطأ', 'm' => 'يجب إن يكون بريد الإلكتروني الخاص بك صحيح. يرجى التأكد','b' => true));
 	}else{
